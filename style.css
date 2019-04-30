@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mixBlnd {
+  background-blend-mode: screen;
+}
+
+.lady {
+  margin-left: 35%;
+  margin-top: 15%;
+}
+
+.lady .ladyImg {
+  width: 200px;
+  height: 400px;
+}
+
+.travel-pro {
+  position: absolute;
+  left: 20%;
+  top: 10px;
+}
+
+.travel-pro .travel-proImg {
+  width: 80%;
+}
+
+.mice {
+  margin-top: 100px;
+  margin-left: 10px;
+  width: 250px;
+  height: 250px;
+  text-decoration: none;
+}
+
+.mice .miceImg {
+  width: 200px;
+  height: 200px;
+}
+
+.mice .miceImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.mice .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  overflow: hidden;
+}
+
+.mice .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.lifestyle {
+  margin-top: 300px;
+  margin-left: 50px;
+  width: 250px;
+  height: 250px;
+  text-decoration: none;
+}
+
+.lifestyle .lifestyleImg {
+  width: 200px;
+  height: 200px;
+}
+
+.lifestyle .lifestyleImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.lifestyle .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  overflow: hidden;
+}
+
+.lifestyle .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.business-travel {
+  margin-top: 350px;
+  margin-left: 300px;
+  width: 250px;
+  height: 250px;
+  text-decoration: none;
+}
+
+.business-travel .business-travelImg {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.business-travel .business-travelImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.business-travel .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.business-travel .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.hotel {
+  margin-left: 55%;
+  margin-top: 300px;
+  width: 300px;
+  height: 150px;
+  text-decoration: none;
+}
+
+.hotel .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hotel .hotelImg {
+  width: 150px;
+  height: 150px;
+}
+
+.hotel .hotelImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.hotel .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hotel .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.flight {
+  margin-left: 40%;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.flight .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flight .flightImg {
+  width: 200px;
+  height: 200px;
+}
+
+.flight .flightImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.flight .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.flight .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.train {
+  margin-left: 70%;
+  margin-top: 400px;
+  width: 350px;
+  height: 200px;
+  text-decoration: none;
+}
+
+.train .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.train .trainImg {
+  width: 200px;
+  height: 200px;
+}
+
+.train .trainImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.train .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.train .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.trafundo {
+  margin-left: 70%;
+  margin-top: 150px;
+  width: 300px;
+  height: 200px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.trafundo .trafundoImg {
+  width: 250px;
+  height: 250px;
+}
+
+.trafundo .trafundoImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.trafundo .textArea {
+  position: absolute;
+  top: 40px;
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.trafundo .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.depens-x {
+  margin-left: 43%;
+  margin-top: 200px;
+  width: 250px;
+  height: 100px;
+  text-decoration: none;
+}
+
+.depens-x .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.depens-x .depens-xImg {
+  width: 100px;
+  height: 100px;
+}
+
+.depens-x .depens-xImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.depens-x .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.depens-x .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+.passport {
+  margin-left: 80%;
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  text-decoration: none;
+}
+
+.passport .passportImg {
+  width: 150px;
+  height: 150px;
+}
+
+.passport .passportImg:hover ~ .textArea {
+  background-color: #06486e;
+  width: 100%;
+}
+
+.passport .textArea {
+  -webkit-transition: width 0.6s, background-color 0.6s;
+  transition: width 0.6s, background-color 0.6s;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.passport .textArea .titleText {
+  margin: 0;
+  padding: 5px;
+  color: #24b35a;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    padding-top: 10px;
+  }
+  body .travel-pro {
+    top: 40px;
+  }
+  body .lady {
+    margin-left: 45%;
+    margin-top: 100%;
+  }
+  body .mice {
+    margin-left: 5%;
+    margin-top: 20%;
+  }
+  body .lifestyle {
+    margin-left: 10%;
+    margin-top: 50%;
+  }
+  body .business-travel {
+    margin-left: 15%;
+    margin-top: 100%;
+  }
+  body .train {
+    margin-left: 70%;
+    margin-top: 100%;
+  }
+  body .depens-x {
+    margin-left: 60%;
+    margin-top: 98%;
+  }
+  body .hotel {
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+  body .trafundo {
+    margin-left: 70%;
+    margin-top: 50%;
+  }
+  body .passport {
+    margin-left: 70%;
+    margin-top: 10%;
+  }
+  body .flight {
+    margin-left: 40%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parallax.js</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="parallax.js"></script>
+    <script src="randomImage.js"></script>
+  </head>
+  <body>
+    <a href="http://www.travel-pro.lu/about-us.html" class="travel-pro">
+      <img class="travel-proImg" src="./images/travel-pro.png" alt=""
+    /></a>
+
+    <div class="container">
+      <ul id="scene">
+        <!-- <li class="layer" data-depth=".1"><img src="text.png" /></li> -->
+        <a
+          href="http://www.travel-pro.lu/mice.html"
+          target="_blank"
+          class="layer mice"
+          data-depth=".3"
+        >
+          <div class="imgContainer">
+            <img id="miceImg" src="./images/mice/mice1.png" class="miceImg" />
+            <div class="textArea">
+              <p class="titleText">Mice</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="http://www.travel-pro.lu/business-travel.html"
+          target="_blank"
+          class="layer business-travel"
+          data-depth=".7"
+        >
+          <div class="imgContainer">
+            <img src="./images/business-travel.png" class="business-travelImg" />
+            <div class="textArea">
+              <p class="titleText">Bussiness Travel</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
+          target="_blank"
+          class="layer hotel"
+          data-depth=".3"
+        >
+          <div class="imgContainer">
+            <img src="./images/hotel.png" class="hotelImg" />
+            <div class="textArea">
+              <p class="titleText">Bussiness Travel</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://www.trafundo.com/"
+          target="_blank"
+          class="layer trafundo"
+          data-depth=".3"
+        >
+          <div class="imgContainer">
+            <img src="./images/trafundo.png" class="trafundoImg" />
+            <div class="textArea">
+              <p class="titleText">Lifestyle</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="http://www.travel-pro.lu/lifestyle.html"
+          target="_blank"
+          class="layer lifestyle"
+          data-depth=".2"
+        >
+          <div class="imgContainer">
+            <img src="./images/lifestyle.png" class="lifestyleImg" />
+            <div class="textArea">
+              <p class="titleText">Lifestyle</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
+          target="_blank"
+          class="layer flight"
+          data-depth="1"
+        >
+          <div class="imgContainer">
+            <img src="./images/flight.png" class="flightImg" />
+            <div class="textArea">
+              <p class="titleText">Bussiness Travel</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
+          target="_blank"
+          class="layer train"
+          data-depth=".3"
+        >
+          <div class="imgContainer">
+            <img src="./images/train.png" class="trainImg" />
+            <div class="textArea">
+              <p class="titleText">Bussiness Travel</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://cibtvisas.be/travelpro"
+          target="_blank"
+          class="layer passport"
+          data-depth=".3"
+        >
+          <div class="imgContainer">
+            <img src="./images/passport.png" class="passportImg" />
+            <div class="textArea">
+              <p class="titleText">Passport</p>
+            </div>
+          </div>
+        </a>
+
+        <li class="layer lady" data-depth=".08">
+          <img src="./images/lady1.png" class="ladyImg" />
+        </li>
+        <a
+          href="ttp://depens-x.com/login.html"
+          target="_blank"
+          class="layer depens-x"
+          data-depth=".07"
+        >
+          <div class="imgContainer">
+            <img src="./images/depens-x.png" class="depens-xImg" />
+            <div class="textArea">
+              <p class="titleText">Depenx</p>
+            </div>
+          </div>
+        </a>
+      </ul>
+    </div>
+    <script>
+      var scene = document.getElementById("scene");
+      var parallax = new Parallax(scene);
+    </script>
+  </body>
+</html>
