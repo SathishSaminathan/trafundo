@@ -1,3 +1,33 @@
+$mice_margin_left: 40px;
+$mice_margin_top: -140px;
+
+$business_travel_margin_left: 300px;
+$business_travel_margin_top: 250px;
+
+$lady_margin_left: 32%;
+$lady_margin_top: 16%;
+
+$hotel_margin_left: 55%;
+$hotel_margin_top: 80px;
+
+$train_margin_left: 60%;
+$train_margin_top: 300px;
+
+$flight_margin_left: 40%;
+$flight_margin_top: $mice_margin_top + 20px;
+
+$passport_margin_left: 80%;
+$passport_margin_top: $mice_margin_top + 15;
+
+$lifestyle_margin_left: 50px;
+$lifestyle_margin_top: 100px;
+
+$trafundo_margin_left: 75%;
+$trafundo_margin_top: 120px;
+
+$depens_x_margin_left: 35%;
+$depens_x_margin_top: 100px;
+
 body {
   margin: 0;
   padding: 0;
@@ -7,13 +37,87 @@ body {
   box-sizing: border-box;
 }
 
+.miceback,
+.businesstravelBack,
+.hotelBack,
+.trafundoBack,
+.lifestyleBack,
+.flightBack,
+.passportBack,
+.trainBack,
+.depens-x_back {
+  width: 200px;
+  height: 200px;
+  background: url(./images/cartoon/imagebackParticles.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-color: yellow;
+}
+
+.miceback {
+  margin-top: $mice_margin_top;
+  margin-left: $mice_margin_left;
+}
+
+.businesstravelBack {
+  margin-top: $business_travel_margin_top;
+  margin-left: $business_travel_margin_left;
+}
+
+.hotelBack {
+  margin-top: $hotel_margin_top;
+  margin-left: ($hotel_margin_left);
+}
+
+.trafundoBack {
+  margin-top: $trafundo_margin_top;
+  margin-left: $trafundo_margin_left;
+}
+
+.lifestyleBack {
+  margin-top: $lifestyle_margin_top;
+  margin-left: $lifestyle_margin_left;
+}
+
+.flightBack {
+  margin-top: $flight_margin_top;
+  margin-left: $flight_margin_left;
+  z-index: -1;
+}
+
+.passportBack {
+  margin-top: $passport_margin_top;
+  margin-left: $passport_margin_left;
+}
+
+.trainBack {
+  margin-top: $train_margin_top;
+  margin-left: $train_margin_left;
+}
+
+.depens-x_back {
+  width: 150px;
+  height: 150px;
+  margin-top: ($depens_x_margin_top)-30;
+  margin-left: ($depens_x_margin_left)-2;
+}
+
+.backgound_particle {
+  background: url(./images/cartoon/background_particle.png);
+  position: absolute;
+  // z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .container {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url(./images/background.jpg);
-  background-repeat: no-repeat;
+  background: url(./images/cartoon-background.jpg);
+  background-repeat: n o-repeat;
   background-size: cover;
 }
 .mixBlnd {
@@ -21,11 +125,11 @@ body {
 }
 
 .lady {
-  margin-left: 35%;
-  margin-top: 15%;
+  margin-left: $lady_margin_left;
+  margin-top: $lady_margin_top;
   .ladyImg {
-    width: 200px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
   }
 }
 
@@ -33,14 +137,15 @@ body {
   position: absolute;
   left: 20%;
   top: 10px;
+  z-index: 1;
   .travel-proImg {
     width: 80%;
   }
 }
 
 .mice {
-  margin-top: 100px;
-  margin-left: 10px;
+  margin-top: $mice_margin_top;
+  margin-left: $mice_margin_left;
   width: 250px;
   height: 250px;
   text-decoration: none;
@@ -69,8 +174,8 @@ body {
 }
 
 .lifestyle {
-  margin-top: 300px;
-  margin-left: 50px;
+  margin-top: $lifestyle_margin_top;
+  margin-left: $lifestyle_margin_left;
   width: 250px;
   height: 250px;
   text-decoration: none;
@@ -98,10 +203,10 @@ body {
 }
 
 .business-travel {
-  margin-top: 350px;
-  margin-left: 300px;
-  width: 250px;
-  height: 250px;
+  margin-top: $business_travel_margin_top;
+  margin-left: $business_travel_margin_left;
+  width: 200px;
+  height: 200px;
   text-decoration: none;
   // background-color: red;
   .business-travelImg {
@@ -131,8 +236,8 @@ body {
 }
 
 .hotel {
-  margin-left: 55%;
-  margin-top: 300px;
+  margin-left: $hotel_margin_left;
+  margin-top: $hotel_margin_top;
   width: 300px;
   height: 150px;
   // background-color: red;
@@ -166,7 +271,8 @@ body {
 }
 
 .flight {
-  margin-left: 40%;
+  margin-top: $flight_margin_top;
+  margin-left: $flight_margin_left;
   width: 400px;
   height: 200px;
   overflow: hidden;
@@ -201,8 +307,8 @@ body {
 }
 
 .train {
-  margin-left: 70%;
-  margin-top: 400px;
+  margin-left: $train_margin_left;
+  margin-top: $train_margin_top;
   width: 350px;
   height: 200px;
   // background-color: red;
@@ -236,16 +342,16 @@ body {
 }
 
 .trafundo {
-  margin-left: 70%;
-  margin-top: 150px;
+  margin-left: $trafundo_margin_left;
+  margin-top: $trafundo_margin_top;
   width: 300px;
   height: 200px;
   // background-color: red;
   text-decoration: none;
   overflow: hidden;
   .trafundoImg {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     // background-color: black;
     &:hover ~ {
       .textArea {
@@ -256,7 +362,7 @@ body {
   }
   .textArea {
     position: absolute;
-    top: 40px;
+    top: 20px;
     transition: width 0.6s, background-color 0.6s;
     width: 0%;
     white-space: nowrap;
@@ -270,8 +376,8 @@ body {
 }
 
 .depens-x {
-  margin-left: 43%;
-  margin-top: 200px;
+  margin-left: $depens_x_margin_left;
+  margin-top: $depens_x_margin_top;
   width: 250px;
   height: 100px;
   // background-color: red;
@@ -305,8 +411,8 @@ body {
 }
 
 .passport {
-  margin-left: 80%;
-  margin-top: 10px;
+  margin-left: $passport_margin_left;
+  margin-top: $passport_margin_top;
   width: 200px;
   height: 200px;
   // background-color: red;
@@ -340,48 +446,68 @@ body {
   body {
     // display: none;
     padding-top: 10px;
-    .travel-pro{
+    box-sizing: border-box;
+    .miceback,
+    .businesstravelBack,
+    .hotelBack,
+    .trafundoBack,
+    .lifestyleBack,
+    .flightBack,
+    .passportBack,
+    .trainBack,
+    .depens-x_back {
+      background: none;
+    }
+    .travel-pro {
       top: 40px;
     }
     .lady {
+      margin-left: 0%;
+      margin-top: 50%;
+      .ladyImg {
+        width: 1000px;
+        height: 1000px;
+      }
+    }
+    .mice {
+      margin-left: 5%;
+      // margin-top: 0%;
+    }
+    .lifestyle {
+      margin-left: 10%;
+      margin-top: 30%;
+    }
+    .business-travel {
+      margin-left: 15%;
+      margin-top: 80%;
+    }
+    .train {
+      margin-left: 70%;
+      margin-top: 80%;
+    }
+    .depens-x {
       margin-left: 45%;
       margin-top: 100%;
+      .depens-xImg {
+        width: 200px;
+        height: 200px;
+      }
     }
-    .mice{
-      margin-left: 5%;
-      margin-top: 20%;
+    .hotel {
+      margin-left: 70%;
+      margin-top: 30%;
     }
-    .lifestyle{
-      margin-left: 10%;
+    .trafundo {
+      margin-left: 75%;
       margin-top: 50%;
     }
-    .business-travel{
-      margin-left: 15%;
-      margin-top: 100%;
+    .passport {
+      margin-left: 75%;
+      // margin-top: 10%;
     }
-    .train{
-      margin-left: 70%;
-      margin-top: 100%;
-    }
-    .depens-x{
-      margin-left: 60%;
-      margin-top: 98%;
-    }
-    .hotel{
-      margin-left: 50%;
-      margin-top: 50%;
-    }
-    .trafundo{
-      margin-left: 70%;
-      margin-top: 50%;
-    }
-    .passport{
-      margin-left: 70%;
-      margin-top: 10%;
-    }
-    .flight{
+    .flight {
       margin-left: 40%;
-      // margin-top: 50%;
+      margin-top: -30%;
     }
   }
 }

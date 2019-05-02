@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var numRand = Math.floor(Math.random() * 7) + 1;
   console.log(numRand);
-  $("#miceImg").attr("src", "./images/mice/mice" + numRand + ".png");
+  // $("#miceImg").attr("src", "./images/mice/mice" + numRand + ".png");
 });
 // var numRand = Math.floor(Math.random()*101);
 //   document.getElementById("miceImg").src = "img/IMG_"+numRand+".jpg";
