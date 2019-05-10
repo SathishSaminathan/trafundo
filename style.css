@@ -1,26 +1,255 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   font-family: "Roboto";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #73d9f0;
+  overflow: hidden;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.backgroundImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cloudsContainer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.backgroundImg {
-  height: 100vh;
-  width: 100%;
+.cloudsContainer .cloud {
+  width: 100px;
+  height: 100px;
   position: absolute;
+  -webkit-filter: drop-shadow(20px 3px 10px #222);
+          filter: drop-shadow(20px 3px 10px #222);
+}
+
+.cloudsContainer .cloud:nth-child(1) {
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  -webkit-animation: cloud_movement 20s linear infinite;
+          animation: cloud_movement 20s linear infinite;
+}
+
+.cloudsContainer .cloud:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  -webkit-animation: cloud_movement 15s linear infinite;
+          animation: cloud_movement 15s linear infinite;
+}
+
+.cloudsContainer .cloud:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  -webkit-animation: cloud_movement 7s linear infinite;
+          animation: cloud_movement 7s linear infinite;
+}
+
+.cloudsContainer .cloud:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  -webkit-animation: cloud_movement 7s linear infinite;
+          animation: cloud_movement 7s linear infinite;
+}
+
+.cloudsContainer .cloud:nth-child(5) {
+  width: 70px;
+  height: 90px;
+  top: 3%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-filter: drop-shadow(10px 3px 10px #222);
+          filter: drop-shadow(10px 3px 10px #222);
+  -webkit-animation: plane_movement 3s linear infinite;
+          animation: plane_movement 3s linear infinite;
+}
+
+@-webkit-keyframes cloud_movement {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes cloud_movement {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes plane_movement {
+  0% {
+    right: 3%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes plane_movement {
+  0% {
+    right: 3%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.topRight {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  z-index: 1;
+}
+
+@-webkit-keyframes swingTopRight {
+  0% {
+    -webkit-transform: translate(2px, -3px);
+            transform: translate(2px, -3px);
+  }
+  100% {
+    -webkit-transform: translate(4px, 0);
+            transform: translate(4px, 0);
+  }
+}
+
+@keyframes swingTopRight {
+  0% {
+    -webkit-transform: translate(2px, -3px);
+            transform: translate(2px, -3px);
+  }
+  100% {
+    -webkit-transform: translate(4px, 0);
+            transform: translate(4px, 0);
+  }
+}
+
+.topLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  z-index: 1;
+}
+
+@-webkit-keyframes swingTopLeft {
+  0% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes swingTopLeft {
+  0% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.bottomLeft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 300px;
+  -webkit-animation: swingbottomLeft 1s ease-in-out infinite alternate;
+          animation: swingbottomLeft 1s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@-webkit-keyframes swingbottomLeft {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes swingbottomLeft {
+  0% {
+  }
+  100% {
+  }
+}
+
+.bottomRight {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  -webkit-animation: swingbottomRight 1.5s ease-in-out infinite alternate;
+          animation: swingbottomRight 1.5s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@-webkit-keyframes swingbottomRight {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes swingbottomRight {
+  0% {
+  }
+  100% {
+  }
 }
 
 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
-  background-repeat: n o-repeat;
-  background-size: cover;
 }
 
 .textArea {
@@ -81,12 +310,12 @@ body {
 }
 
 .passportBack {
-  margin-top: -190px;
-  margin-left: 52%;
+  margin-top: -175px;
+  margin-left: 54%;
 }
 
 .trainBack {
-  margin-top: 28%;
+  margin-top: 20%;
   margin-left: 50%;
 }
 
@@ -104,10 +333,6 @@ body {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.mixBlnd {
-  background-blend-mode: screen;
 }
 
 .lady {
@@ -176,8 +401,6 @@ body {
 .lifestyle {
   margin-top: 200px;
   margin-left: 18%;
-  width: 250px;
-  height: 250px;
   text-decoration: none;
 }
 
@@ -231,6 +454,9 @@ body {
   width: 0%;
   white-space: nowrap;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
 }
 
 .business-travel .textArea .titleText {
@@ -283,9 +509,8 @@ body {
 .flight {
   margin-top: -200px;
   margin-left: 36%;
-  width: 400px;
-  height: 200px;
-  overflow: hidden;
+  width: 150px;
+  height: 150px;
   text-decoration: none;
 }
 
@@ -305,7 +530,7 @@ body {
 
 .flight .flightImg:hover ~ .textArea {
   background-color: #06486e;
-  width: 70%;
+  width: 100%;
 }
 
 .flight .textArea {
@@ -315,7 +540,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
+  left: 20%;
 }
 
 .flight .textArea .titleText {
@@ -326,19 +552,8 @@ body {
 
 .train {
   margin-left: 50%;
-  margin-top: 28%;
-  width: 350px;
-  height: 200px;
+  margin-top: 20%;
   text-decoration: none;
-}
-
-.train .imgContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .train .trainImg {
@@ -348,7 +563,7 @@ body {
 
 .train .trainImg:hover ~ .textArea {
   background-color: #06486e;
-  width: 70%;
+  width: 100%;
 }
 
 .train .textArea {
@@ -358,8 +573,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-  left: 200px;
-  top: 70%;
+  left: 30%;
+  top: 0;
 }
 
 .train .textArea .titleText {
@@ -447,14 +662,14 @@ body {
 .passport {
   margin-left: 55%;
   margin-top: -160px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   text-decoration: none;
 }
 
 .passport .passportImg {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .passport .passportImg:hover ~ .textArea {
@@ -468,6 +683,9 @@ body {
   width: 0%;
   white-space: nowrap;
   overflow: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 20%;
 }
 
 .passport .textArea .titleText {
@@ -490,30 +708,51 @@ body {
   body .flightBack,
   body .passportBack,
   body .trainBack,
+  body .depens-x_back,
+  body .miceImg,
+  body .business-travelImg,
+  body .hotelImg,
+  body .trafundoImg,
+  body .lifestyleImg,
+  body .flightImg,
+  body .passportImg,
+  body .trainImg,
+  body .depens-xImg {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  body .miceback,
+  body .businesstravelBack,
+  body .hotelBack,
+  body .trafundoBack,
+  body .lifestyleBack,
+  body .flightBack,
+  body .passportBack,
+  body .trainBack,
   body .depens-x_back {
     background: none;
   }
   body .travel-pro {
-    top: 40px;
+    top: 10%;
   }
   body .lady {
-    margin-left: -30px;
-    margin-top: 50%;
+    margin-left: 20%;
+    margin-top: 35%;
   }
   body .lady .ladyImg {
-    width: 1000px;
-    height: 1000px;
+    width: 600px;
+    height: 600px;
   }
   body .mice {
     margin-left: 13%;
   }
   body .lifestyle {
     margin-left: 10%;
-    margin-top: 30%;
+    margin-top: 40%;
   }
   body .business-travel {
     margin-left: 15%;
-    margin-top: 80%;
+    margin-top: 70%;
   }
   body .train {
     margin-left: 70%;
@@ -521,7 +760,7 @@ body {
   }
   body .depens-x {
     margin-left: 38%;
-    margin-top: 100%;
+    margin-top: 90%;
   }
   body .depens-x .depens-xImg {
     width: 200px;
@@ -529,18 +768,516 @@ body {
   }
   body .hotel {
     margin-left: 75%;
-    margin-top: 30%;
+    margin-top: 23%;
   }
   body .trafundo {
     margin-left: 75%;
-    margin-top: 50%;
+    margin-top: 48%;
   }
   body .passport {
     margin-left: 70%;
   }
   body .flight {
-    margin-left: 43%;
+    margin-left: 40%;
     margin-top: -30%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .depens-x_back {
+    display: none !important;
+  }
+  .miceback,
+  .businesstravelBack,
+  .hotelBack,
+  .trafundoBack,
+  .lifestyleBack,
+  .flightBack,
+  .passportBack,
+  .trainBack,
+  .depens-x_back,
+  .miceImg,
+  .business-travelImg,
+  .hotelImg,
+  .trafundoImg,
+  .lifestyleImg,
+  .flightImg,
+  .passportImg,
+  .trainImg,
+  .depens-xImg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .depens-xImg {
+    width: 75px !important;
+    height: 75px !important;
+  }
+  .ladyImg {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .mice,
+  .miceback {
+    margin-top: -60px;
+    margin-left: 24%;
+  }
+  .lifestyle,
+  .lifestyleBack {
+    margin-top: 120px;
+    margin-left: 26%;
+  }
+  .business-travel,
+  .businesstravelBack {
+    margin-top: 270px;
+    margin-left: 34%;
+  }
+  .train,
+  .trainBack {
+    margin-top: 22%;
+    margin-left: 50%;
+  }
+  .hotel,
+  .hotelBack {
+    margin-top: -10px;
+    margin-left: 64%;
+  }
+  .trafundo,
+  .trafundoBack {
+    margin-top: 160px;
+    margin-left: 63%;
+  }
+  .flight,
+  .flightBack {
+    margin-top: -170px;
+    margin-left: 36%;
+  }
+  .depens-x,
+  .depens-x_back {
+    margin-top: -1%;
+    margin-left: 44%;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .center .miceback,
+  .center .businesstravelBack,
+  .center .hotelBack,
+  .center .trafundoBack,
+  .center .lifestyleBack,
+  .center .flightBack,
+  .center .passportBack,
+  .center .trainBack,
+  .center .depens-x_back,
+  .center .miceImg,
+  .center .business-travelImg,
+  .center .hotelImg,
+  .center .trafundoImg,
+  .center .lifestyleImg,
+  .center .flightImg,
+  .center .passportImg,
+  .center .trainImg,
+  .center .depens-xImg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .center .depens-xImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .center .ladyImg {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .center .lady {
+    margin-top: 16%;
+    margin-left: 38%;
+  }
+  .center .mice,
+  .center .miceback {
+    margin-top: -40px;
+    margin-left: 24%;
+  }
+  .center .lifestyle,
+  .center .lifestyleBack {
+    margin-top: 150px;
+    margin-left: 22%;
+  }
+  .center .business-travel,
+  .center .businesstravelBack {
+    margin-top: 330px;
+    margin-left: 30%;
+  }
+  .center .train,
+  .center .trainBack {
+    margin-top: 25%;
+    margin-left: 48%;
+  }
+  .center .trafundo,
+  .center .trafundoBack {
+    margin-top: 205px;
+    margin-left: 63%;
+  }
+  .center .hotel,
+  .center .hotelBack {
+    margin-top: -10px;
+    margin-left: 64%;
+  }
+  .center .flight,
+  .center .flightBack {
+    margin-top: -170px;
+    margin-left: 36%;
+  }
+  .center .depens-x {
+    margin-top: 0;
+    margin-left: 43%;
+  }
+  .center .depens-x_back {
+    display: none !important;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 1024px) {
+  body .center .miceback,
+  body .center .businesstravelBack,
+  body .center .hotelBack,
+  body .center .trafundoBack,
+  body .center .lifestyleBack,
+  body .center .flightBack,
+  body .center .passportBack,
+  body .center .trainBack,
+  body .center .depens-x_back,
+  body .center .miceImg,
+  body .center .business-travelImg,
+  body .center .hotelImg,
+  body .center .trafundoImg,
+  body .center .lifestyleImg,
+  body .center .flightImg,
+  body .center .passportImg,
+  body .center .trainImg,
+  body .center .depens-xImg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  body .center .depens-xImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  body .center .ladyImg {
+    width: 400px !important;
+    height: 400px !important;
+  }
+  body .center .lady {
+    margin-top: 22%;
+    margin-left: 38%;
+  }
+  body .center .mice,
+  body .center .miceback {
+    margin-top: -40px;
+    margin-left: 24%;
+  }
+  body .center .lifestyle,
+  body .center .lifestyleBack {
+    margin-top: 150px;
+    margin-left: 22%;
+  }
+  body .center .business-travel,
+  body .center .businesstravelBack {
+    margin-top: 330px;
+    margin-left: 30%;
+  }
+  body .center .train,
+  body .center .trainBack {
+    margin-top: 23%;
+    margin-left: 48%;
+  }
+  body .center .trafundo,
+  body .center .trafundoBack {
+    margin-top: 205px;
+    margin-left: 63%;
+  }
+  body .center .hotel,
+  body .center .hotelBack {
+    margin-top: -10px;
+    margin-left: 64%;
+  }
+  body .center .flight,
+  body .center .flightBack {
+    margin-top: -170px;
+    margin-left: 36%;
+  }
+  body .center .depens-x {
+    margin-top: 0;
+    margin-left: 43%;
+  }
+  body .center .depens-x_back {
+    display: none !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    padding-top: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body .miceback,
+  body .businesstravelBack,
+  body .hotelBack,
+  body .trafundoBack,
+  body .lifestyleBack,
+  body .flightBack,
+  body .passportBack,
+  body .trainBack,
+  body .depens-x_back,
+  body .miceImg,
+  body .business-travelImg,
+  body .hotelImg,
+  body .trafundoImg,
+  body .lifestyleImg,
+  body .flightImg,
+  body .passportImg,
+  body .trainImg,
+  body .depens-xImg {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  body .miceback,
+  body .businesstravelBack,
+  body .hotelBack,
+  body .trafundoBack,
+  body .lifestyleBack,
+  body .flightBack,
+  body .passportBack,
+  body .trainBack,
+  body .depens-x_back {
+    background: none;
+  }
+  body .travel-pro {
+    top: 10%;
+  }
+  body .lady {
+    margin-left: 20%;
+    margin-top: 15%;
+  }
+  body .lady .ladyImg {
+    width: 600px;
+    height: 600px;
+  }
+  body .mice {
+    margin-left: 13%;
+    margin-top: 5%;
+  }
+  body .lifestyle {
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+  body .business-travel {
+    margin-left: 15%;
+    margin-top: 55%;
+  }
+  body .train {
+    margin-left: 70%;
+    margin-top: 60%;
+  }
+  body .depens-x {
+    margin-left: 40%;
+    margin-top: 65%;
+  }
+  body .depens-x .depens-xImg {
+    width: 200px;
+    height: 200px;
+  }
+  body .hotel {
+    margin-left: 75%;
+    margin-top: 7%;
+  }
+  body .trafundo {
+    margin-left: 75%;
+    margin-top: 30%;
+  }
+  body .passport {
+    margin-left: 60%;
+  }
+  body .flight {
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body {
+    padding-top: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body .miceback,
+  body .businesstravelBack,
+  body .hotelBack,
+  body .trafundoBack,
+  body .lifestyleBack,
+  body .flightBack,
+  body .passportBack,
+  body .trainBack,
+  body .depens-x_back,
+  body .miceImg,
+  body .business-travelImg,
+  body .hotelImg,
+  body .trafundoImg,
+  body .lifestyleImg,
+  body .flightImg,
+  body .passportImg,
+  body .trainImg,
+  body .depens-xImg {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  body .travel-pro {
+    top: 10%;
+  }
+  body .lady {
+    margin-left: 20%;
+    margin-top: 25%;
+  }
+  body .lady .ladyImg {
+    width: 600px;
+    height: 600px;
+  }
+  body .mice {
+    margin-left: 13%;
+    margin-top: 5%;
+  }
+  body .lifestyle {
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+  body .business-travel {
+    margin-left: 15%;
+    margin-top: 55%;
+  }
+  body .train {
+    margin-left: 70%;
+    margin-top: 60%;
+  }
+  body .depens-x {
+    margin-left: 40%;
+    margin-top: 65%;
+  }
+  body .depens-x .depens-xImg {
+    width: 200px;
+    height: 200px;
+  }
+  body .hotel {
+    margin-left: 75%;
+    margin-top: 7%;
+  }
+  body .trafundo {
+    margin-left: 75%;
+    margin-top: 30%;
+  }
+  body .passport {
+    margin-left: 60%;
+  }
+  body .flight {
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body .lady {
+    margin-left: 20%;
+    margin-top: 40%;
+  }
+  body .lady .ladyImg {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  body .center .miceback,
+  body .center .businesstravelBack,
+  body .center .hotelBack,
+  body .center .trafundoBack,
+  body .center .lifestyleBack,
+  body .center .flightBack,
+  body .center .passportBack,
+  body .center .trainBack,
+  body .center .depens-x_back,
+  body .center .miceImg,
+  body .center .business-travelImg,
+  body .center .hotelImg,
+  body .center .trafundoImg,
+  body .center .lifestyleImg,
+  body .center .flightImg,
+  body .center .passportImg,
+  body .center .trainImg,
+  body .center .depens-xImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  body .center .depens-xImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  body .center .ladyImg {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  body .center .lady {
+    margin-top: 20%;
+    margin-left: 38%;
+  }
+  body .center .mice,
+  body .center .miceback {
+    margin-top: -40px;
+    margin-left: 24%;
+  }
+  body .center .lifestyle,
+  body .center .lifestyleBack {
+    margin-top: 140px;
+    margin-left: 22%;
+  }
+  body .center .business-travel,
+  body .center .businesstravelBack {
+    margin-top: 270px;
+    margin-left: 30%;
+  }
+  body .center .train,
+  body .center .trainBack {
+    margin-top: 30%;
+    margin-left: 48%;
+  }
+  body .center .trafundo,
+  body .center .trafundoBack {
+    margin-top: 205px;
+    margin-left: 63%;
+  }
+  body .center .hotel,
+  body .center .hotelBack {
+    margin-top: -10px;
+    margin-left: 64%;
+  }
+  body .center .flight,
+  body .center .flightBack {
+    margin-top: -170px;
+    margin-left: 36%;
+  }
+  body .center .depens-x {
+    margin-top: 0;
+    margin-left: 43%;
+  }
+  body .center .depens-x_back {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

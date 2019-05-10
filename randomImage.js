@@ -1,6 +1,18 @@
 $(document).ready(function() {
   var numRand = Math.floor(Math.random() * 7) + 1;
   console.log(numRand);
+
+  console.log($(window).height())
+  var width = $(window).width()
+  var height= $(window).height();
+  if(height>700 && width<1900){
+    // var topHeight= height-1000;
+    $('#scene').css('top',100);
+  }
+  if(height>1000){
+    // var topHeight= height-1000;
+    $('#scene').css('top',150);
+  }
   // $("#miceImg").attr("src", "./images/mice/mice" + numRand + ".png");
 });
 // var numRand = Math.floor(Math.random()*101);

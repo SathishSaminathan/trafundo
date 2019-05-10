@@ -18,17 +18,28 @@
     <script src="randomImage.js"></script>
   </head>
   <body>
-    <img
-      src="./images/cartoon/cartoon-background.jpg"
-      alt=""
-      class="backgroundImg"
-    />
-    <a href="http://www.travel-pro.lu/about-us.html" class="travel-pro">
+    <div class="cloudsContainer">
+      <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
+      <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
+      <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
+      <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
+      <img src="./images/cartoon/gifs/rocket.gif" alt="" class="cloud" />
+    </div>
+    <img src="./images/cartoon/bgIcons.png" alt="" class="backgroundImg" />
+    <a href="http://www.travel-pro.lu/about-us.html" target="_blank">
+      <img src="./images/cartoon/top left.png" alt="" class="topLeft" />
+    </a>
+    <a href="http://www.travel-pro.lu/about-us.html" target="_blank">
+      <img src="./images/cartoon/top right.png" alt="" class="topRight" />
+    </a>
+    <img src="./images/cartoon/bottom left.png" alt="" class="bottomLeft" />
+    <img src="./images/cartoon/bottom right.png" alt="" class="bottomRight" />
+    <!-- <a href="http://www.travel-pro.lu/about-us.html" class="travel-pro">
       <img class="travel-proImg" src="./images/cartoon/travelpro.png" alt=""
     /></a>
     <a href="http://www.travel-pro.lu/about-us.html" class="american">
       <img class="americanImg" src="./images/cartoon/american.png" alt=""
-    /></a>
+    /></a> -->
     <!-- <div class="backgound_particle"></div> -->
     <div class="center">
       <div class="container">
@@ -37,7 +48,6 @@
             <img src="./images/cartoon/ladyCartoon.png" class="ladyImg" />
           </li>
           <li class="layer miceback" data-depth=".2"></li>
-          <!-- <li class="layer" data-depth=".1"><img src="text.png" /></li> -->
           <a
             href="http://www.travel-pro.lu/mice.html"
             target="_blank"
@@ -52,6 +62,20 @@
               />
               <div class="textArea">
                 <p class="titleText">Mice</p>
+              </div>
+            </div>
+          </a>
+          <li class="layer lifestyleBack" data-depth=".1"></li>
+          <a
+            href="http://www.travel-pro.lu/lifestyle.html"
+            target="_blank"
+            class="layer lifestyle"
+            data-depth=".2"
+          >
+            <div class="imgContainer">
+              <img src="./images/cartoon/lifestyle.png" class="lifestyleImg" />
+              <div class="textArea">
+                <p class="titleText">Lifestyle</p>
               </div>
             </div>
           </a>
@@ -72,6 +96,34 @@
               </div>
             </div>
           </a>
+          <li class="layer trainBack" data-depth=".1"></li>
+          <a
+            href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
+            target="_blank"
+            class="layer train"
+            data-depth=".3"
+          >
+            <div class="imgContainer">
+              <img src="./images/cartoon/train.png" class="trainImg" />
+              <div class="textArea">
+                <p class="titleText">Train</p>
+              </div>
+            </div>
+          </a>
+          <li class="layer trafundoBack" data-depth=".1"></li>
+          <a
+            href="https://www.trafundo.com/"
+            target="_blank"
+            class="layer trafundo"
+            data-depth=".2"
+          >
+            <div class="imgContainer">
+              <img src="./images/cartoon/hammer.png" class="trafundoImg" />
+              <div class="textArea">
+                <p class="titleText">Trafundo</p>
+              </div>
+            </div>
+          </a>
           <li class="layer hotelBack" data-depth=".1"></li>
           <a
             href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
@@ -86,34 +138,7 @@
               </div>
             </div>
           </a>
-          <li class="layer trafundoBack" data-depth=".1"></li>
-          <a
-            href="https://www.trafundo.com/"
-            target="_blank"
-            class="layer trafundo"
-            data-depth=".2"
-          >
-            <div class="imgContainer">
-              <img src="./images/cartoon/hammer.png" class="trafundoImg" />
-              <div class="textArea">
-                <p class="titleText">Lifestyle</p>
-              </div>
-            </div>
-          </a>
-          <li class="layer lifestyleBack" data-depth=".1"></li>
-          <a
-            href="http://www.travel-pro.lu/lifestyle.html"
-            target="_blank"
-            class="layer lifestyle"
-            data-depth=".2"
-          >
-            <div class="imgContainer">
-              <img src="./images/cartoon/lifestyle.png" class="lifestyleImg" />
-              <div class="textArea">
-                <p class="titleText">Lifestyle</p>
-              </div>
-            </div>
-          </a>
+
           <li class="layer flightBack" data-depth=".1"></li>
           <a
             href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
@@ -125,20 +150,6 @@
               <img src="./images/cartoon/flight.png" class="flightImg" />
               <div class="textArea">
                 <p class="titleText">Bussiness Travel</p>
-              </div>
-            </div>
-          </a>
-          <li class="layer trainBack" data-depth=".1"></li>
-          <a
-            href="https://amadeus.cytric.net/ama-TPPRO-AmericanExpress_SME"
-            target="_blank"
-            class="layer train"
-            data-depth=".3"
-          >
-            <div class="imgContainer">
-              <img src="./images/cartoon/train.png" class="trainImg" />
-              <div class="textArea">
-                <p class="titleText">Train</p>
               </div>
             </div>
           </a>
@@ -176,6 +187,11 @@
     <script>
       var scene = document.getElementById("scene");
       var parallax = new Parallax(scene);
+      // window.onload = check;
+      // function check() {
+      //   alert(screen.width + "*" + screen.height);
+      // }
+      // console.log(screen.width + "*" + screen.height);
     </script>
   </body>
 </html>
