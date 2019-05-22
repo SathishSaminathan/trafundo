@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+body .mob_ad_banner {
+  display: none;
+}
+
 .center {
   width: 100%;
   height: 100%;
@@ -59,8 +63,8 @@ body {
   width: 150px;
   height: 150px;
   top: 60%;
-  -webkit-animation: cloud_movement 7s linear infinite;
-          animation: cloud_movement 7s linear infinite;
+  -webkit-animation: cloud_movement 8s linear infinite;
+          animation: cloud_movement 8s linear infinite;
 }
 
 .cloudsContainer .cloud:nth-child(4) {
@@ -72,15 +76,15 @@ body {
 }
 
 .cloudsContainer .cloud:nth-child(5) {
-  width: 70px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   top: 3%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
   -webkit-filter: drop-shadow(10px 3px 10px #222);
           filter: drop-shadow(10px 3px 10px #222);
-  -webkit-animation: plane_movement 3s linear infinite;
-          animation: plane_movement 3s linear infinite;
+  -webkit-animation: plane_movement 5s linear infinite;
+          animation: plane_movement 5s linear infinite;
 }
 
 @-webkit-keyframes cloud_movement {
@@ -131,6 +135,56 @@ body {
   100% {
     right: 100%;
   }
+}
+
+.web_ad_banner .left_ad {
+  width: 150px;
+  height: 550px;
+  position: absolute;
+  left: 3%;
+  background-color: red;
+  z-index: 2;
+  top: 15%;
+}
+
+.web_ad_banner .right_ad {
+  width: 150px;
+  height: 550px;
+  position: absolute;
+  right: 3%;
+  background-color: red;
+  z-index: 2;
+  top: 15%;
+}
+
+.mob_ad_banner {
+  position: absolute;
+  bottom: 1%;
+  z-index: 2;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mob_ad_banner .top_ad {
+  width: 250px;
+  height: 60px;
+  background-color: red;
+  margin: 10px;
+}
+
+.mob_ad_banner .bottom_ad {
+  width: 250px;
+  height: 60px;
+  background-color: blue;
+  margin: 10px;
 }
 
 .topRight {
@@ -695,6 +749,14 @@ body {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   body {
     padding-top: 10px;
     -webkit-box-sizing: border-box;
@@ -1016,6 +1078,14 @@ body {
 
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   body {
     padding-top: 10px;
     -webkit-box-sizing: border-box;
@@ -1108,6 +1178,14 @@ body {
 /* ----------- iPhone 4 and 4S ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   body {
     padding-top: 10px;
     -webkit-box-sizing: border-box;
@@ -1189,6 +1267,14 @@ body {
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   body .lady {
     margin-left: 20%;
     margin-top: 40%;

@@ -40,6 +40,9 @@ body {
   box-sizing: border-box;
   background-color: #73d9f0;
   overflow: hidden;
+  .mob_ad_banner{
+    display: none;
+  }
 }
 
 .center {
@@ -89,7 +92,7 @@ body {
       width: 150px;
       height: 150px;
       top: 60%;
-      animation: cloud_movement 7s linear infinite;
+      animation: cloud_movement 8s linear infinite;
     }
     &:nth-child(4) {
       width: 150px;
@@ -98,13 +101,13 @@ body {
       animation: cloud_movement 7s linear infinite;
     }
     &:nth-child(5) {
-      width: 70px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
       top: 3%;
       // right: 50%;
-      transform: rotate(-90deg);
+      transform: rotate(-135deg);
       filter: drop-shadow(10px 3px 10px #222);
-      animation: plane_movement 3s linear infinite;
+      animation: plane_movement 5s linear infinite;
     }
   }
 }
@@ -134,6 +137,53 @@ body {
 }
 
 // clouds area ends
+
+// ad banner starts
+.web_ad_banner {
+  .left_ad {
+    width: 150px;
+    height: 550px;
+    position: absolute;
+    left: 3%;
+    background-color: red;
+    z-index: 2;
+    top: 15%;
+  }
+  .right_ad {
+    width: 150px;
+    height: 550px;
+    position: absolute;
+    right: 3%;
+    background-color: red;
+    z-index: 2;
+    top: 15%;
+  }
+}
+
+.mob_ad_banner {
+  position: absolute;
+  bottom: 1%;
+  z-index: 2;
+  width: 100%;
+  // background-color: yellow;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .top_ad {
+    width: 250px;
+    height: 60px;
+    background-color: red;
+    margin: 10px;
+  }
+  .bottom_ad {
+    width: 250px;
+    height: 60px;
+    background-color: blue;
+    margin: 10px;
+  }
+}
+// ad banner ends
 
 // corner images starts
 .topRight {
@@ -660,6 +710,12 @@ body {
 
 // media queries
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner{
+    display: flex !important;
+  }
   body {
     // display: none;
     .miceback,
@@ -750,24 +806,6 @@ body {
       margin-left: 40%;
       margin-top: -30%;
     }
-  }
-}
-
-@media all and (min-width: 400px) {
-  .center {
-    // background-color: yellow;
-  }
-}
-
-@media all and (min-width: 600px) {
-  .center {
-    // background-color: pink;
-  }
-}
-
-@media all and (min-width: 900px) {
-  .center {
-    // background-color: blue;
   }
 }
 
@@ -969,13 +1007,6 @@ body {
   }
 }
 
-// @media screen and (width: 1280px) and (height: 1024px){
-
-// }
-
-@media (min-height: 700px) {
-}
-
 @media screen and (width: 1280px) and (height: 1024px) {
   body {
     // display: none;
@@ -1084,6 +1115,12 @@ body {
 
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner{
+    display: flex !important;
+  }
   body {
     .miceback,
     .businesstravelBack,
@@ -1180,6 +1217,12 @@ body {
 
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner{
+    display: flex !important;
+  }
   body {
     .miceback,
     .businesstravelBack,
@@ -1276,6 +1319,12 @@ body {
 
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .web_ad_banner {
+    display: none;
+  }
+  .mob_ad_banner{
+    display: flex !important;
+  }
   body {
     .lady {
       margin-left: 20%;

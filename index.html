@@ -23,7 +23,7 @@
       <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
       <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
       <img src="./images/cartoon/clouds.png" alt="" class="cloud" />
-      <img src="./images/cartoon/gifs/rocket.gif" alt="" class="cloud" />
+      <img src="./images/cartoon/plane.png" alt="" class="cloud" />
     </div>
     <img src="./images/cartoon/bgIcons.png" alt="" class="backgroundImg" />
     <a href="http://www.travel-pro.lu/about-us.html" target="_blank">
@@ -41,6 +41,14 @@
       <img class="americanImg" src="./images/cartoon/american.png" alt=""
     /></a> -->
     <!-- <div class="backgound_particle"></div> -->
+    <div class="web_ad_banner">
+      <img src="./images/background.jpg" class="left_ad" id="left_ad"></img>
+      <img src="./images/background.jpg" class="right_ad" id="right_ad"></img>
+    </div>
+    <div class="mob_ad_banner" id="mob_ad_banner">
+      <img src="./images/background.jpg" class="top_ad" id="top_ad"></img>
+      <img src="./images/background.jpg" class="bottom_ad" id="bottom_ad"></img>
+    </div>
     <div class="center">
       <div class="container">
         <ul id="scene">
@@ -187,6 +195,8 @@
     <script>
       var scene = document.getElementById("scene");
       var parallax = new Parallax(scene);
+      // alert(document.getElementById("mob_ad_banner").clientWidth)
+      console.log(window.innerWidth)
       // window.onload = check;
       // function check() {
       //   alert(screen.width + "*" + screen.height);
